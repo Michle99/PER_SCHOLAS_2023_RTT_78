@@ -6,50 +6,98 @@
     <title>Admin Page</title>
     <!-- Add Bootstrap CSS Link Here -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Add custom CSS for dark mode -->
+    <style>
+        body.dark-mode {
+            background-color: #333;
+            color: #110f0f;
+        }
+        .card.dark-mode {
+            background-color: #444;
+            border: 1px solid #555;
+        }
+        .table.dark-mode th,
+        .table.dark-mode td {
+            border-color: #555;
+        }
+        .footer.dark-mode {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <!-- Sidebar -->
     <div class="container-fluid">
         <div class="row">
             <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <!-- Sidebar content here -->
                 <div class="position-sticky">
+                    <!-- Dashboard Link -->
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link active" href="#">
                                 Dashboard
                             </a>
                         </li>
+                    </ul>
+            
+                    <!-- Interface Dropdown Menu -->
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1">
+                        <span>Interface</span>
+                        <a class="link-secondary" href="#" aria-label="Add a new report">
+                            <i class="fas fa-angle-down"></i>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                Interface
+                                Components
                             </a>
-                            <ul class="nav flex-column ml-3">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Components Dropdown Menu</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Utilities</a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                Addons
+                                Utilities
                             </a>
-                            <ul class="nav flex-column ml-3">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Pages</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Charts</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Tables</a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
+            
+                    <!-- Addons Dropdown Menu -->
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1">
+                        <span>Addons</span>
+                        <a class="link-secondary" href="#" aria-label="Add a new report">
+                            <i class="fas fa-angle-down"></i>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Pages
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Charts
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Tables
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Dark Mode Toggle Button -->
+                    <div class="container-fluid">
+                        <div class="row justify-content-end">
+                            <div class="col-md-12 mt-2">
+                                <button class="btn btn-primary" id="darkModeToggle">Toggle Dark Mode</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </nav>
 
@@ -64,7 +112,7 @@
                         </form>
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa-solid fa-bell"></i></a>
+                                <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fas fa-envelope"></i></a>
@@ -81,33 +129,33 @@
                     <div class="row mt-4">
                         <div class="col-md-3">
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-body dark-mode">
                                     <i class="fas fa-dollar-sign"></i> Earnings (Monthly)
-                                    <p>$1, 500</p>
+                                    <p>Example Card Content</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-body dark-mode">
                                     <i class="fas fa-money-bill-alt"></i> Earnings (Annual)
-                                    <p>$4,500</p>
+                                    <p>Example Card Content</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-body dark-mode">
                                     <i class="fas fa-tasks"></i> Tasks
-                                    <p>10 Tasks</p>
+                                    <p>Example Card Content</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-body dark-mode">
                                     <i class="fas fa-exclamation-circle"></i> Pending Requests Notifications
-                                    <p>10 Notifications</p>
+                                    <p>Example Card Content</p>
                                 </div>
                             </div>
                         </div>
@@ -119,33 +167,35 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h2>Sales Overview</h2>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>Product</th>
-                                        <th>Revenue</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>2023-10-01</td>
-                                        <td>Product A</td>
-                                        <td>$500</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2023-10-02</td>
-                                        <td>Product B</td>
-                                        <td>$700</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2023-10-03</td>
-                                        <td>Product C</td>
-                                        <td>$600</td>
-                                    </tr>
-                                    <!-- Add more rows as needed -->
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-dark dark-mode">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Product</th>
+                                            <th>Revenue</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2023-10-01</td>
+                                            <td>Product A</td>
+                                            <td>$500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2023-10-02</td>
+                                            <td>Product B</td>
+                                            <td>$700</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2023-10-03</td>
+                                            <td>Product C</td>
+                                            <td>$600</td>
+                                        </tr>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -154,9 +204,9 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3">
+    <footer class="footer dark-mode">
         <div class="container-fluid">
-            <span class="text-muted">Copyright Information</span>
+            <span class="text-muted">&copy; 2023</span>
         </div>
     </footer>
 
@@ -167,5 +217,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for Dark Mode Toggle -->
+    <script>
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        const body = document.body;
+
+        darkModeToggle.addEventListener("click", () => {
+            body.classList.toggle("dark-mode");
+        });
+    </script>
 </body>
 </html>
