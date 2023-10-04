@@ -1,0 +1,385 @@
+.resume-container {
+    background-color: rgb(38, 42, 52);
+    border: 5px solid rgb(6, 11, 6);
+    display: flex;
+    flex-flow: column wrap;
+    color: white;
+}
+
+/* Upper Resume section */
+.general-info {
+    border: 5px solid green;
+    padding: 10px;
+
+}
+
+.general-info-cont {
+    display: flex;
+}
+
+
+/* Image and Resume Name */
+.general-info-name-image {
+    border: 5px solid rgb(62, 24, 255);
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    align-items: center;
+    justify-content: start;
+    padding-left: 30px;
+}
+.general-info-name-image-txt-cont {
+    text-align: end;
+}
+
+.general-info-name-image>div>h4 {
+   font-size: 32px;
+   color: rgb(250, 255, 255);
+   text-align: left;
+}
+
+.general-info-name-image>div>h2 {
+    font-size: 36px;
+}
+
+.general-info-name-image>img {
+    height: 150px;
+    border: 5px solid salmon;
+    margin-right: 20px;
+}
+
+
+
+/* Personal Infos */
+.general-info-pinfos {
+    border: 5px solid rgb(205, 15, 81);
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: center;
+    /* align-content: space-between; */
+}
+
+.general-info-pinfos p {
+    font-size: 16px;
+}
+
+.general-info-pinfos>p>span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-info-cont {
+    display: flex;
+    font-size: 20px;
+    word-wrap: break-word;
+    margin: 5px;
+}
+
+.contact-info-cont>p>a {
+    text-transform: none;
+    color: rgb(249, 251, 255);
+}
+#key {
+    width: 29%;
+    text-align: end;
+    color: white;
+    margin: 0 10px 0 0;
+}
+#value {
+    margin-left: 5px;
+    margin: 0 0 0 10px;
+    font-weight: 400;
+}
+
+/* Resume summary */
+.general-info-summary {
+    border: 5px solid rgb(231, 239, 12);
+    padding: 5px;
+    height: fit-content;
+}
+
+/** Employment **/
+.emp_edu_skills {
+    display: flex;
+}
+
+.emp_edu {
+    border: 5px solid saddlebrown;
+    width: 70%;
+    padding-top: 30px;
+}
+
+.employment-header-cont {
+    width: 95%;
+    background-color: rgb(65, 65, 65);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 30px;
+    margin: auto;
+}
+.employment-header i {
+    padding: 0px 5px;
+    margin-right: 5px;
+    font-size: 30px;
+    color: aqua;
+}
+.employment-item-cont {
+    width: 95%;
+    margin: 30px auto;
+    word-wrap: break-word;
+}
+.employment-item-heading-cnt {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.employment-title {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.employment-title>div>i {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+    color: aqua;
+}
+.employment {
+    /* margin: 15px; */
+}
+.employment-desc {
+    padding: 10px;
+    word-wrap: break-word;
+}
+.year {
+    margin-left: auto;
+}
+/* Education */
+.education {
+    /* margin: 15px; */
+}
+
+/** Skills **/
+.skills-list {
+    border: 5px solid rgb(248, 136, 56);
+    width: 30%;
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+}
+.programming-skills {
+    margin-bottom: 30px;
+    width: 95%;
+}
+.programming-skills h4 {
+    text-align: center;
+    color: aliceblue;
+}
+.programming-skills-cnt {
+    width: 95%;
+    margin: 10px 0;
+}
+.programming-skills-cnt h5{
+    margin-bottom: 0px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.skills-container {
+    /* width: 100%;
+    margin-top: -15px; */
+    background-color: #5f5959;
+}
+.skillcentage {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
+}
+.skillcentage span {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.wordpress {
+    width: 90%;
+    background-color: green;
+}
+.php {
+    width: 80%;
+    background-color: rgb(71, 176, 71);
+}
+.html {
+    width: 93%;
+    background-color: rgb(31, 57, 31);
+}
+.css {
+    width: 80%;
+    background-color: rgb(244, 207, 23);
+}
+.mysql {
+    width: 70%;
+    background-color: rgb(170, 4, 26);
+}
+
+/** Graphic SKills */
+.graphic-skills {
+    margin-bottom: 30px;
+    width: 95%;
+}
+.graphic-skills h4 {
+    text-align: center;
+    color: aliceblue;
+}
+.graphic-skills-cnt {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.graphic-skills-square {
+    width: 15px; 
+    height: 15px; 
+    border: 1px solid black; 
+}
+.photoshp { background-color: rgb(10, 77, 77); }
+.adb-illus { background-color: rgb(13, 130, 91);}
+.indesign { background-color: rgb(41, 91, 74);}
+.crl-drw { background-color: rgb(238, 184, 115);}
+.three-dmax { background-color: rgb(224, 28, 162); }
+
+/** Language Skills */
+.lang-skills {
+    margin-bottom: 30px;
+    width: 95%;
+}
+.lang-skills h4 {
+    text-align: center;
+    color: white;
+}
+.lang-skills-dots {
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%;
+    border: 1px solid black; 
+    margin-right: 15px;
+}
+
+.lang-skills-cnt {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    
+}
+.lang-skills-cnt h3 {
+    margin-right: 2rem;
+}
+
+.fr {
+    background-color: rgb(5, 65, 72);
+}
+.esp {
+    background-color: rgb(247, 254, 26);
+}
+.eng {
+    background-color: rgb(193, 63, 226);
+}
+
+
+/* Add a media query for screens below 768px */
+@media (max-width: 780px) {
+  
+  .general-info-name-image {
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .general-info-name-image-txt-cont {
+    text-align: justify; /* Center the text in smaller screens */
+    /* width: 100%; */
+  }
+
+  .general-info-name-image>img {
+    display: none;
+    margin: auto;
+  }
+
+  #key { 
+    margin-right: 10px; 
+    width: 30%;
+ }
+  
+ 
+  .general-info-pinfos {
+    width: 100%;
+  }
+
+  .contact-info-cont {
+    flex-wrap: wrap;
+    font-size: 20px;
+    width: 100%;
+  }
+  
+  #key { 
+    width: 30%;
+ }
+
+  #value {
+    width: 60%;
+    margin-left: 0;
+ }
+
+  .general-info-summary {
+    margin-bottom: 50px;
+  }
+
+  .general-info-cont {
+    flex-wrap: wrap;
+  }
+
+  .emp_edu {
+    width: 100%;
+  }
+
+  .employment-header-cont {
+    margin: 0;
+    width: 100%;
+  }
+
+  .employment-item-cont {
+    margin: 30px 0;
+  }
+
+  .employment-item-heading-cnt {
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: start;
+  }
+
+  .employment-title-cont {
+    line-height: 16px;
+    margin-left: 0;
+  }
+
+  .year { margin-left: 0; }
+
+  .emp_edu_skills {
+    flex-wrap: wrap-reverse;
+  }
+
+  .emp_edu {
+    width: 100%;
+  }
+
+  .skills-list {
+    width: 100%;
+  }
+}
+
