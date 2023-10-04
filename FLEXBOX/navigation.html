@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation Practice</title>
+
+    <style>
+        body {
+            background-color: rgba(118, 120, 86, 0.81);
+        }
+    header{
+        margin-top: 100px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+        nav > ul {
+            display: flex;
+            list-style-type: none;
+            padding: 14px 0 14px 0;
+            /*When three values are specified, the first margin applies to the top, the second to the right and left, the third to the bottom.*/
+            margin: -8px -8px -8px;
+            background-color:  rgb(75, 75, 232);
+            
+            border: 1px dashed red;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+            /* justify-content: space-around; */
+            /* justify-content: flex-end; */
+            /* justify-content: center; */
+        }
+        li a {
+            border: 1px solid #e3d0d0;
+            padding: 10px 30px;
+            text-decoration: none;
+            color: rgb(243, 234, 234);
+            /* margin-right: 250px; */
+            /* align-items: flex-end; */
+        }
+
+        .link1{
+           /* margin-right: auto; */
+        }
+        .link2{
+            margin-left: auto;
+        }
+        .link3{
+            /* margin-left: 500px;
+            margin-right: 490px; */
+            margin-right:auto;
+
+        }
+        .link4{
+            /* margin-left: auto; */
+            
+        }
+        .link5{
+            /* margin-left: auto; */
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li class="link1"><a href="#">Link1</a></li>
+            <li class="link2"><a href="#">Link2</a></li>
+            <li class="link3"><a href="#">Link3</a></li>
+            <li class="link4"><a href="#">Link4</a></li>
+            <li class="link5"><a href="#">Link5</a></li>
+        </ul>
+    </nav>
+
+</header>
+</body>
+</html>

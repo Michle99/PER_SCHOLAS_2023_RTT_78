@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <!-- Add Bootstrap CSS Link Here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                Dashboard Link
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Interface
+                            </a>
+                            <ul class="nav flex-column ml-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Components Dropdown Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Utilities</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Addons
+                            </a>
+                            <ul class="nav flex-column ml-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Pages</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Charts</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Tables</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-envelope"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas fa-user-circle"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Cards -->
+                <div class="container-fluid">
+                    <div class="row mt-4">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class="fas fa-dollar-sign"></i> Earnings (Monthly)
+                                    <p>Example Card Content</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class="fas fa-money-bill-alt"></i> Earnings (Annual)
+                                    <p>Example Card Content</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class="fas fa-tasks"></i> Tasks
+                                    <p>Example Card Content</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class="fas fa-exclamation-circle"></i> Pending Requests Notifications
+                                    <p>Example Card Content</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sales Overview Table -->
+                <div class="container-fluid mt-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Sales Overview</h2>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Product</th>
+                                        <th>Revenue</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2023-10-01</td>
+                                        <td>Product A</td>
+                                        <td>$500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-10-02</td>
+                                        <td>Product B</td>
+                                        <td>$700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-10-03</td>
+                                        <td>Product C</td>
+                                        <td>$600</td>
+                                    </tr>
+                                    <!-- Add more rows as needed -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3">
+        <div class="container-fluid">
+            <span class="text-muted">Copyright Information</span>
+        </div>
+    </footer>
+
+    <!-- Add Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Add Bootstrap JS Scripts Here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

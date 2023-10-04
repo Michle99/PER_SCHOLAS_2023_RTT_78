@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <!-- Add Bootstrap CSS Link Here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!---- Line Graph styles -->
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Interface
+                            </a>
+                            <ul class="nav flex-column ml-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Components Dropdown Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Utilities</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                Addons
+                            </a>
+                            <ul class="nav flex-column ml-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Pages</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Charts</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Tables</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Notifications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Messages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Profile Picture</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Dashboard -->
+                <div class="container-fluid">
+                    <div class="row mt-4">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    Earnings (Monthly) Example Card
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    Earnings (Annual) Example Card
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    Tasks Card
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    Pending Requests Notifications
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Earnings Overview -->
+                <div class="container-fluid mt-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    Earnings Overview
+                                    <!-- Add your line graph here -->
+                                    
+                                    <div id="lineGraph" style="height: 300px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Revenue Sources -->
+                <div class="container-fluid mt-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    Revenue Sources
+                                    <!-- Add your Donut chart here -->
+                                    
+                                    <div id="pieChart" style="height: 300px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <div class="container-fluid mt-4">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action active">
+                                    Projects
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">Server Migration</a>
+                                <a href="#" class="list-group-item list-group-item-action">Sales Tracking</a>
+                                <a href="#" class="list-group-item list-group-item-action">Customer Database</a>
+                                <a href="#" class="list-group-item list-group-item-action">Payout Details</a>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <!-- Content for Projects -->
+                            <h2>Project Details</h2>
+                            <!-- Add your project content here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Illustrations Container -->
+                <div class="container-fluid mt-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="jumbotron">
+                                <h1 class="display-4">Illustrations Container</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3">
+        <div class="container-fluid">
+            <span class="text-muted">Copyright Information</span>
+        </div>
+    </footer>
+
+    <!-- Add Bootstrap JS Scripts Here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Add your charting libraries and scripts here -->
+</body>
+</html>

@@ -1,0 +1,66 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Overall container for the resume */
+.resume {
+    display: flex;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+/* Left column styling */
+.left-column {
+    flex: 1;
+    padding: 20px;
+    background-color: #212d34;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-column i {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Right column styling */
+.right-column {
+    flex: 2;
+    padding: 20px;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 20px;
+}
+
+/* Icon styling */
+i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Header styling */
+h1, h2, h3 {
+    color: #449bf1;
+}
+
+/* Links styling */
+a {
+    color: #ebf1f4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

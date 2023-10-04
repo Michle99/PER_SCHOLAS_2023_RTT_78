@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>About Us</title>
+    <style>
+        /* Additional inline styles for the table and flexbox */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border-style:none;
+        }
+
+        table, th, td {
+            /* border: 1px solid #333; */
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Flexbox styles */
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .flex-item {
+            flex: 1;
+            background-color: #eee;
+            text-align: center;
+            padding: 20px;
+            margin-right: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- <h1>About Us</h1> -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Our Team</h2>
+            <!-- Table without transparent borders -->
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>CEO</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>CTO</td>
+                </tr>
+                <tr>
+                    <td>Bob Johnson</td>
+                    <td>CFO</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Flexbox with three square-shaped items -->
+        <section>
+            <h2>Our Achievements</h2>
+            <div class="flex-container">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+            </div>
+        </section>
+
+        <!--- Subscribe to Our Newsletters -->
+        <section>
+            <h2>Subscribe to Our Newsletters</h2>
+            <div>
+                <form action="submit_form.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2023 My Website
+    </footer>
+</body>
+</html>
