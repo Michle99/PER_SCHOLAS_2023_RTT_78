@@ -3,113 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
     <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
-        /* Additional inline styles for the table and flexbox */
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            border-style:none;
+        .about-container {
+            width: 90%;
+            margin: auto;
+            margin-bottom: 30px;
         }
-
-        table, th, td {
-            /* border: 1px solid #333; */
+        .about-header {
+            font-family: Cambria, Cochin, Georgia;
+            text-align: center;
+            padding: 5px;
+            color: #627b8b;
+            animation: fadeIn 2s ease;
         }
-
-        th, td {
-            padding: 10px;
-            text-align: left;
+        h1.about-header::first-letter {
+            color: #ba8b45;
+            text-transform: lowercase;
         }
-
-        /* Flexbox styles */
-        .flex-container {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
+        .table th {
+            background-color: #f9b652;
         }
-
-        .flex-item {
-            flex: 1;
-            background-color: #eee;
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #f5f5f5;
+        }
+        /* Add styles for location-hours */
+        .location-hours {
+            background-color: #f3ad3d;
+            color: #2b422f;
             text-align: center;
             padding: 20px;
-            margin-right: 10px;
-            width: 100px;
-            height: 100px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            line-height: 100px;
-            margin: 10px;
+            margin: 66px;
+            font-family: Cambria, Cochin, Georgia;
+            font-weight: bold;
+            border-radius: 10px;
         }
+
+        .location-hours h3 {
+            margin-top: 0;
+        }
+
+        .location-hours p {
+            margin-bottom: 5px;
+        }
+        /* Add styles for the direction-button */
+        .direction-button {
+            background-color: #627b8b;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block; /* Add this to make the button only as wide as its content */
+        }
+
+        .direction-button p {
+            margin: 0;
+            color: #fff;
+            font-weight: bold;
+            animation: fadeIn 1s ease;
+        }
+
+        /* Hover effect */
+        .direction-button:hover {
+            background-color: #3819d6; /* Change background color on hover */
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <!-- <h1>About Us</h1> -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <!-- header-container -->
+        <div class="container">
+            <div id="branding">
+               <h1><span class="highlight">Zane</span> Hour</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Our Team</h2>
-            <!-- Table without transparent borders -->
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                </tr>
-                <tr>
-                    <td>John Doe</td>
-                    <td>CEO</td>
-                </tr>
-                <tr>
-                    <td>Jane Smith</td>
-                    <td>CTO</td>
-                </tr>
-                <tr>
-                    <td>Bob Johnson</td>
-                    <td>CFO</td>
-                </tr>
+    <div class="about-us">
+        <h1 class="about-header display-1">Welcome to Zane Hour</h1>
+        <div class="about-container">
+            <table class="table table-striped text-center">
+                <tbody>
+                    <tr>
+                        <th>The Happiest Hour is a whimsical cocktail bar and full-service restaurant. 
+                            Its “You pick ‘em, we pour ‘em” motto drives a non-judgmental drinks menu in a breezy space, 
+                            adorned with cartoon palm trees, that evokes bygone California and Florida resorts.  
+                            Anchored by an award-winning burger, the elevated diner-style food offering also features sandwiches, 
+                            chopped salads, and an array of sides- simple, yet highly satisfying, and classically American. 
+                            A rock and soul soundtrack completes the mood.
+                        </th>
+                    </tr>
+                </tbody>
             </table>
-        </section>
+        </div>
 
-        <!-- Flexbox with three square-shaped items -->
-        <section>
-            <h2>Our Achievements</h2>
-            <div class="flex-container">
-                <div class="flex-item">Item 1</div>
-                <div class="flex-item">Item 2</div>
-                <div class="flex-item">Item 3</div>
-            </div>
-        </section>
-
-        <!--- Subscribe to Our Newsletters -->
-        <section>
-            <h2>Subscribe to Our Newsletters</h2>
+        <div class="location-hours">
+            <h3>ADDRESS</h3>
             <div>
-                <form action="submit_form.php" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    <br><br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <br><br>
-                    <input type="submit" value="Submit">
-                </form>
+                <p>121 North 12th Street</p>
+                <p>Atlanta, GA 30031</p>
             </div>
-        </section>
-    </main>
+            <div class="direction-button">
+                <p>GET DIRECTIONS</p>
+            </div>
+            <div>
+                <h5>Hours of Operations</h5>
+                <h5>Delivery / Take Out / Inside & Outside Dining</h5>
+                <p>Monday: 5pm-12am</p>
+                <p>Tuesday: 5pm - 1am</p>
+                <p>Wednesday: 5pm-2am</p>
+                <p>Thursday: 5pm - 2am</p>
+                <p>Friday: 5pm-3am</p>
+                <p>Saturday: 2pm-3am</p>
+                <p>Sunday: 3pm-12am</p>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        &copy; 2023 My Website
+        &copy; 2023 Zane Hour
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </body>
 </html>

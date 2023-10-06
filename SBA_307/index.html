@@ -3,114 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="author" content="Zane Hour">
+    <meta name="description" content="Drinking and fun time at Zane Hour">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Home Page</title>
+    <title>Zane Hour | Welcome</title>
     <style>
-       .bg-img {
-            background-image: url("images/Gaudmire.jpg");
-            min-height: 400px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-       }
-       .container {
-            position: absolute;
-            margin: 20px;
-            width: auto;
-       }
-       .topnav {
-            overflow: hidden;
-       }
-       .dropdown {
-            float: right;
-            overflow: hidden;
-       }
-       .dropdown .dropbtn {
-            font-size: 16px;
-            border: none;
-            outline: none;
-            color:white;
-            padding: 14px 16px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
-            margin-right: 30px;
-       }
-       .dropdown:hover, .dropbtn {
-            background-color: rgb(130, 200, 200);
-       }
-       .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: rgb(225, 206, 206);
-            /* color:#120e0e; */
-            min-width: 400px;
-            /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1; */
-       }
-       .dropdown-content a {
-        float: none;
-        color: black;
-        padding: 10px 5px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-       }
-       .dropdown-content a:hover {
-            background-color: #6b3e3e;
+         /* Add CSS styles for the image gallery */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+           /* justify-content: space-evenly; */
+            justify-content: center;
+            margin-bottom: 30px;
         }
-        .dropdown:hover .dropdown-content {
-            display: block;
+
+        .image-gallery img {
+            width: 20%;
+            margin-bottom: 5px;
+            border: 5px solid orange;
+            box-shadow: 5px 5px 5px transparent;
+            transition: all 0.5s;
+        }
+        img:hover {
+            filter: blur(0px);
+            opacity: 1;
+            box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.767);
+            transform: scale(1.02);
+            transition: all 0.5s;
         }
     </style>
 </head>
 <body>
-    <div class="bg-img">
-      <div class="bg-container">
-        <div class="topnav">
-          <div class="dropdown">
-            <button class="dropbtn">
-              <i class="fa fa-bars fa-5x"></i>
-            </button>
-            <div class="dropdown-content">
-              <a href="#">ABOUT US</a>
-              <a href="#">LOCATIONS</a>
-              <a href="#">WORK WITH US</a>
-              <a href="#">CONTACT</a>
-            </div>
-          </div>
+   <header>
+    <!---- header-container -->
+    <div class="container">
+        <div id="branding">
+           <h1><span class="highlight">Zane</span> Hour</h1>
         </div>
-      </div>
+        <nav>
+            <ul>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-    
-    <main>
-        <section id="trending-carousel">
-           <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. 
-                Enim nec dui nunc mattis enim. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit. 
-                Vel risus commodo viverra maecenas accumsan lacus vel. Erat nam at lectus urna duis convallis convallis tellus id. 
-                Egestas dui id ornare arcu odio ut. Leo a diam sollicitudin tempor id eu nisl nunc mi. 
-                Morbi tincidunt augue interdum velit euismod in pellentesque massa. Sagittis purus sit amet volutpat consequat. 
-                Potenti nullam ac tortor vitae purus faucibus ornare. Lacus viverra vitae congue eu consequat ac. 
-                Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Sit amet massa vitae tortor condimentum lacinia quis vel eros. 
-                Non tellus orci ac auctor augue mauris augue neque gravida. Tincidunt lobortis feugiat vivamus at augue. 
-                Lorem sed risus ultricies tristique nulla aliquet. Metus dictum at tempor commodo. 
-                Ornare suspendisse sed nisi lacus sed viverra tellus in hac. Scelerisque purus semper eget duis at tellus at urna condimentum.
-           </p>
-            
-        </section>
+   </header>
 
-        <section>
-            <h2>Featured GIF</h2>
-            <img src="images/earth-night.gif" alt="Sample GIF">
-        </section>
-    </main>
+   <section id="showcase">
+      <div class="container">
+        <h1>Zane Hour</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias esse aspernatur minima aperiam. Consequuntur ipsum quos est sunt minus neque corporis veniam porro voluptas. Omnis perferendis necessitatibus corrupti atque ipsum.</p>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2023 My Website</p>
-    </footer>
+   <section id="boxes">
+    <h2></h2>
+    <!-- Updated image gallery using flexbox -->
+    <div class="image-gallery">
+       <img src="images/pexels-rache.jpg" alt="Cocktails">
+       <img src="images/liquor.jpg" alt="Wines">
+       <img src="images/alcohol.jpg" alt="Entrees">
+       <img src="https://media.giphy.com/media/Zw3oBUuOlDJ3W/giphy.gif" alt="bar gif">
+       <img src="images/alcohol.jpg" alt="Entrees">
+       <img src="images/alcohol.jpg" alt="Entrees">
+       <img src="images/alcohol.jpg" alt="Entrees">
+       <img src="images/alcohol.jpg" alt="Entrees">
+    </div>
+  </section>
+
+   <section id="newsletter">
+    <div class="container">
+        <h1>Subscribe to our Newsletter</h1>
+        <form>
+            <input type="email" placeholder="Enter Email" >
+            <button type="submit" class="button-1">Subscribe</button>
+        </form>
+    </div>
+   </section>
+
+   <footer>
+     <p>Zane Hour Copyright &copy; 2023</p>
+   </footer>
 </body>
 </html>
