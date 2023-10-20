@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif;
+  background-color: rgb(165, 165, 37);
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.image-gallery img {
+  width: 55%;
+  margin-bottom: 5px;
+  border: 5px solid orange;
+  box-shadow: 5px 5px 5px transparent;
+  transition: all 0.5s;
+}
+img:hover {
+  filter: blur(0px);
+  opacity: 1;
+  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.767);
+  transform: scale(1.02);
+  transition: all 0.5s;
+}
