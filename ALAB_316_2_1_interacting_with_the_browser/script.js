@@ -35,7 +35,7 @@ function updateDisplay() {
     <button id="play-again" style="${gameWon ? "display: block;" : "display: none;"}">Play Again</button>
   `;
 
-  if (gameWon) {
+  if (gameWon || attempts === 0) {
     document.getElementById("guess").style.display = "none";
     document.getElementById("play-again").style.display = "block";
   }
@@ -47,7 +47,7 @@ function updateDisplay() {
 
 // Function to handle user input
 function handleGuess() {
-  if (gameWon) return;
+  if (gameWon || attempts === 0) return;
 
   const guess = document.getElementById("guess").value.toLowerCase();
 
@@ -66,14 +66,14 @@ function handleGuess() {
       attempts--;
     }
 
-    if (attempts === 0) {
-      gameWon = false; // User has lost
+    // if (attempts === 0) {
+    //   gameWon = false; // User has lost
+    // }
+
+    if (attempts === 0 || hiddenWord.indexOf("_") === -1) {
+      gameWon = false; // User has won
     }
 
-    if (hiddenWord.indexOf("_") === -1) {
-      gameWon = true; // User has won
-    }
-    
     updateDisplay();
   }
   document.getElementById("guess").value = "";
