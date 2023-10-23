@@ -1,9 +1,9 @@
 // Define an array of words or phrases for the game
-const words = ["javascript", "programming", "hangman", "challenge", "surprise", "openai", "gpt-3"];
+const words = ["javascript", "programming", "hangman", "challenge", "surprise", "openai", "gpt3"];
 let currentWord = "";
 let hiddenWord = [];
 let attempts = 6; // Number of allowed incorrect attempts
-let gameWon = false;
+let gameOver = false;
 
 // Function to select a random word from the array
 function selectRandomWord() {
@@ -15,15 +15,15 @@ function initializeGame() {
   currentWord = selectRandomWord().toLowerCase();
   hiddenWord = currentWord.split("").map(() => "_");
   attempts = 6;
-  gameWon = false;
+  gameOver = false;
   updateDisplay();
 }
 
 // Function to update the game display
 function updateDisplay() {
   const wordDisplay = hiddenWord.join(" ");
-  const message = gameWon ? "You won! Congratulations!" : `Guess the word: ${wordDisplay}`;
   const attemptMessage = `Remaining attempts: ${attempts}`;
+  const message = gameOver ? (hiddenWord.indexOf("_") === -1 ? "You won! Congratulations!" : "You lost. Try again!") : `Guess the word: ${wordDisplay}`;
 
   const app = document.getElementById("app");
   app.innerHTML = `
@@ -32,22 +32,17 @@ function updateDisplay() {
     <p>${attemptMessage}</p>
     <input type="text" id="guess" placeholder="Enter a letter" />
     <button id="submit">Submit Guess</button>
-    <button id="play-again" style="${gameWon ? "display: block;" : "display: none;"}">Play Again</button>
+    <button id="play-again" style="display: ${gameOver ? "block" : "none"}">Play Again</button>
   `;
 
-  if (gameWon || attempts === 0) {
-    document.getElementById("guess").style.display = "none";
-    document.getElementById("play-again").style.display = "block";
-  }
-
-  // Event listener for button click
+  // Event listeners
   document.getElementById("submit").addEventListener("click", handleGuess);
   document.getElementById("play-again").addEventListener("click", initializeGame);
 }
 
 // Function to handle user input
 function handleGuess() {
-  if (gameWon || attempts === 0) return;
+  if (gameOver) return;
 
   const guess = document.getElementById("guess").value.toLowerCase();
 
@@ -66,12 +61,9 @@ function handleGuess() {
       attempts--;
     }
 
-    // if (attempts === 0) {
-    //   gameWon = false; // User has lost
-    // }
-
-    if (attempts === 0 || hiddenWord.indexOf("_") === -1) {
-      gameWon = false; // User has won
+    if (hiddenWord.indexOf("_") === -1 || attempts === 0) {
+      // If there are no underscores left in hiddenWord or no remaining attempts, the game is over
+      gameOver = true;
     }
 
     updateDisplay();
