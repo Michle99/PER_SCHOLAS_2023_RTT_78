@@ -87,7 +87,7 @@ topMenuEl.addEventListener("click", function(event) {
   event.preventDefault();
   // Check if the element clicked was not an <a> element and return immediately.
   if(!event.target.matches("a")) {
-  return;
+    return;
   }
   // Cache the clicked <a> element.
   const clickedLink = event.target;
@@ -97,8 +97,8 @@ topMenuEl.addEventListener("click", function(event) {
     link.classList.remove("active");
   });
 
-    // Toggle the "active" class on the clicked <a> element.
-    clickedLink.classList.toggle("active");
+  // Toggle the "active" class on the clicked <a> element.
+  clickedLink.classList.toggle("active");
 
   // Part 5: Adding Submenu Interaction
   // Find the corresponding menuLinks object for the clicked <a>.
@@ -120,7 +120,7 @@ topMenuEl.addEventListener("click", function(event) {
   if (event.target.textContent === "ABOUT") {
     mainEl.innerHTML = "<h1>About</h1>";
   } else {
-    mainEl.innerHTML = "<h1>" + event.target.textContent + "</h1>";
+    mainEl.innerHTML = "<h1>" + event.target.innerText + "</h1>";
   }
 
   // Log the content of the <a> to verify the handler is working.
@@ -170,7 +170,7 @@ subMenuEl.addEventListener("click", (event) => {
   if (event.target.textContent === "ABOUT") {
     mainEl.innerHTML = "<h1>About</h1>";
   } else {
-    mainEl.innerHTML = "<h1>" + event.target.textContent + "</h1>";
+    mainEl.innerHTML = "<h1>" + event.target.innerText + "</h1>";
   }
 
   // Log the content of the <a> to verify the handler is working.
