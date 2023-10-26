@@ -117,10 +117,10 @@ topMenuEl.addEventListener("click", function(event) {
   }
    // Update the contents of mainEl within an <h1> to the 
   // contents of the <a> element clicked
-  if (event.target.textContent === "ABOUT") {
+  if (event.target.textContent === "about") {
     mainEl.innerHTML = "<h1>About</h1>";
   } else {
-    mainEl.innerHTML = "<h1>" + event.target.innerText + "</h1>";
+    mainEl.innerHTML = `<h1>${event.target.textContent}</h1>`;
   }
 
   // Log the content of the <a> to verify the handler is working.
@@ -167,11 +167,12 @@ subMenuEl.addEventListener("click", (event) => {
 
   // Update the contents of mainEl within an <h1> to the 
   // contents of the <a> element clicked within subMenuEl.
-  if (event.target.textContent === "ABOUT") {
-    mainEl.innerHTML = "<h1>About</h1>";
-  } else {
-    mainEl.innerHTML = "<h1>" + event.target.innerText + "</h1>";
-  }
+  // if (event.target.textContent === "ABOUT") {
+  //   mainEl.innerHTML = "<h1>About</h1>";
+  // } else {
+  //   mainEl.innerHTML = "<h1>" + event.target.innerText + "</h1>";
+  // }
+  mainEl.innerHTML = `<h1>${event.target.textContent}</h1>`;
 
   // Log the content of the <a> to verify the handler is working.
   console.log("Clicked link text: ", event.target.textContent);
