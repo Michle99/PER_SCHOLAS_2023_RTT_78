@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    h1 Image Details
+    img(src=image.url, alt=image.title, style="max-width: 100%;")
+    h2= image.title
+    p= details.description

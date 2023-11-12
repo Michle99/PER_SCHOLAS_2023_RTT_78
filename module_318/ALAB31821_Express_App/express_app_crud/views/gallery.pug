@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    // Task: Use flexbox to arrange images
+    h1 Gallery
+    each image in images
+        .card(style="width: 18rem;")
+            img.card-img-top(src=image.url, alt=image.title)
+            .card-body
+                h5.card-title= image.title
+                a.btn.btn-primary(href=`/details/${image.id}`) View Details

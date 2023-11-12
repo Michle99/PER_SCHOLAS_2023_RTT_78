@@ -1,0 +1,70 @@
+body {
+    background-color: #534949;
+}
+
+.card-body {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.card {
+    /* padding: 15px;         
+    border-radius: 25px;   
+    margin-bottom: 40px;    */
+}
+
+.mt-5 {
+    border-radius:  55px;
+}
+
+.card-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style the paragraph elements for better user experience */
+.card-text {
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.1); /* Background color with transparency */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    display: inline-block;
+    margin: 5px;
+}
+
+.bi {
+    font-size: 36px; /* Adjust the size of the Bootstrap Icons as needed */
+    margin: 10px 0;
+}
+
+#weather-card {
+    display: none;
+}
+
+/* Add styles for the footer */
+.footer {
+    background-color: #333; /* Set your desired background color */
+    color: #fff; /* Text color for the footer */
+    text-align: center; /* Center-align the content */
+    padding: 10px; /* Add padding for spacing */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-muted {
+    margin: 5px; /* Adjust the margin as needed for spacing between elements */
+}

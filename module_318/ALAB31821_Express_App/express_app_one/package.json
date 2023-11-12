@@ -1,0 +1,23 @@
+{
+  "name": "alab31821_express_app",
+  "version": "1.0.0",
+  "description": "Building an Express Aplication.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "npx pm2-dev app.js",
+    "start": "npx pm2 start app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Michael O",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "pm2": "^5.3.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.1",
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
+  }
+}
